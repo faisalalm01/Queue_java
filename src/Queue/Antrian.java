@@ -15,14 +15,14 @@ public class Antrian {
         belakang = -1;
         jumItem = 0;
     }    
-    public void masuk (long j){
+    public void enqueue (long j){
         if (!isFull()){
             antrian[++belakang] = j;
             jumItem++;
         }
     }
     
-    public long keluar(){
+    public long dequeue(){
         long temp = antrian[0];
         if (!isEmpty()){
             for (int i=0; i<jumItem; i++)
@@ -33,7 +33,7 @@ public class Antrian {
         return temp;
     }
     
-    public long peekDepan(){
+    public long peek(){
         return antrian[depan];
     }
     

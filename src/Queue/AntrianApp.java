@@ -3,20 +3,20 @@ public class AntrianApp {
 
     public static void main(String[] args) {
         Antrian antrian = new Antrian(10);
-        antrian.masuk(40);
+        antrian.enqueue(40);
         antrian.display();
-        antrian.masuk(33);
+        antrian.enqueue(33);
         antrian.display();
-        System.out.println("nilai yang paling depan = "+ antrian.peekDepan());
-        antrian.masuk(60);
+        System.out.println("nilai yang paling depan = "+ antrian.peek());
+        antrian.enqueue(60);
         antrian.display();
-        System.out.println("yang diambil dari antrian = " + antrian.keluar());
+        System.out.println("yang diambil dari antrian = " + antrian.dequeue());
         antrian.display();
-        System.out.println("yang diambil dari antrian = " + antrian.keluar());
+        System.out.println("yang diambil dari antrian = " + antrian.dequeue());
         antrian.display();
-        antrian.masuk(54);
+        antrian.enqueue(54);
         antrian.display();
-        System.out.println("nilai yang paling depan = "+ antrian.peekDepan());
+        System.out.println("nilai yang paling depan = "+ antrian.peek());
         
     }
     
